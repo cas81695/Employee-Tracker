@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/cas81695/Employee-Tracker#readme",
   "dependencies": {
+    "connection": "^1.1.0",
+    "console.table": "^0.10.0",
     "inquirer": "^7.1.0",
     "mysql": "^2.18.1"
   }
