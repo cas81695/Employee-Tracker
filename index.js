@@ -7,6 +7,18 @@ const connection = require("connection");
 const mysql = require("mysql");
 
 
+const connection = mysql.createConnection({
+	host: "localhost",
+	port: 3306,
+	user: "root",
+	password: "C@s81695",
+	database: "employee_trackerDB",
+});
+
+connection.connect(function(err) {
+	if (err) throw err;
+});
+
 
 const askQuestions = function() {
     inquirer
@@ -191,8 +203,7 @@ function addEmployee() {
         askQuestions();
       });
   }
-  
-  // allows user to add a new role/title
+
   function addRole() {
     inquirer
       .prompt([
