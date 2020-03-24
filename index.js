@@ -1,23 +1,6 @@
 const inquirer = require("inquirer");
 
-const conTab = require("console.table");
-
 const connection = require("connection");
-
-const mysql = require("mysql");
-
-
-const connection = mysql.createConnection({
-	host: "localhost",
-	port: 3306,
-	user: "root",
-	password: "C@s81695",
-	database: "employee_trackerDB",
-});
-
-connection.connect(function(err) {
-	if (err) throw err;
-});
 
 
 const askQuestions = function() {
@@ -39,7 +22,7 @@ const askQuestions = function() {
       })
       .then(function(answer) {
         console.log(answer);
-        // start of switch statment for user choice
+  
         switch (answer.startQ) {
           case "view all employees":
             viewEmployees();
@@ -71,7 +54,7 @@ const askQuestions = function() {
         }
       });
   };
-  askQestions();
+  askQuestions();
 
   function viewEmployees() {
     console.log("retrieving employess from database");
