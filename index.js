@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 
 const connection = require("connection");
 
+const consoleTable = require("console.table")
+
 
 const askQuestions = function() {
     inquirer
@@ -51,10 +53,18 @@ const askQuestions = function() {
           case "add role":
             addRole();
             break;
+
+        case "EXIT": 
+            endQuetions();
+            break;
+        default:
+            break;
         }
       });
   };
+
   askQuestions();
+
 
   function viewEmployees() {
     console.log("retrieving employess from database");
@@ -224,3 +234,7 @@ function addEmployee() {
         askQuestions();
       });
   }
+
+  function endQuetions () {
+    connection.end();
+}

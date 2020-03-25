@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
 	port: 3306,
 	user: "root",
 	password: "C@s81695",
-	database: "employee_trackerDB",
+	database: "employees_trackerDB",
 });
 
 connection.connect(function(err) {
