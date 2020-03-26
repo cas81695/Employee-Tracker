@@ -36,3 +36,4 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Kirito", "Swordsman", 4, 7);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Asuna", "Maiden", 1, 2);
+
